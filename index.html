@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Winter in Norway | Photo gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre|Open+Sans:300|Libre+Baskerville:700|Droid+Serif:700" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="container header">
+        <div class="searchbox">
+          <form action="index.html" method="post">
+            <input type="text" id="search" placeholder="Search for an image">
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      
+      <main class="gallery">
+        <a class="fancybox" data-title-id="title-1" href="img/photos2/01.jpg"><img src="img/photos2/thumbnails/01.jpg" alt=""/></a>
+<div id="title-1" class="hidden">
+   Hay Bales<br>I love hay bales. Took this snap on a drive through the countryside past some straw fields.
+</div>
+
+<a class="fancybox" data-title-id="title-2" href="img/photos2/02.jpg"><img src="img/photos2/thumbnails/02.jpg" alt=""/></a>
+<div id="title-2" class="hidden">
+   Lake<br>The lake was so calm today. We had a great view of the snow on the mountains from here.
+</div>
+
+<a class="fancybox" data-title-id="title-3" href="img/photos2/03.jpg"><img src="img/photos2/thumbnails/03.jpg" alt=""/></a>
+<div id="title-3" class="hidden">
+   Canyon<br>I hiked to the top of the mountain and got this picture of the canyon and trees below.
+</div>
+
+<a class="fancybox" data-title-id="title-4" href="img/photos2/04.jpg"><img src="img/photos2/thumbnails/04.jpg" alt=""/></a>
+<div id="title-4" class="hidden">
+   Iceberg<br>It was amazing to see an iceberg up close, it was so cold but didn’t snow today.
+</div>
+
+<a class="fancybox" data-title-id="title-5" href="img/photos2/05.jpg"><img src="img/photos2/thumbnails/05.jpg" alt=""/></a>
+<div id="title-5" class="hidden">
+   Desert<br>The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons.
+</div>
+
+<a class="fancybox" data-title-id="title-6" href="img/photos2/06.jpg"><img src="img/photos2/thumbnails/06.jpg" alt=""/></a>
+<div id="title-6" class="hidden">
+   Fall<br>Fall is coming, I love when the leaves on the trees start to change color.
+</div>
+
+<a class="fancybox" data-title-id="title-7" href="img/photos2/07.jpg"><img src="img/photos2/thumbnails/07.jpg" alt=""/></a>
+<div id="title-7" class="hidden">
+   Plantation<br>I drove past this plantation yesterday, everything is so green!
+</div>
+
+<a class="fancybox" data-title-id="title-8" href="img/photos2/08.jpg"><img src="img/photos2/thumbnails/08.jpg" alt=""/></a>
+<div id="title-8" class="hidden">
+   Dunes<br>My summer vacation to the Oregon Coast. I love the sandy dunes!
+</div>
+
+<a class="fancybox" data-title-id="title-9" href="img/photos2/09.jpg"><img src="img/photos2/thumbnails/09.jpg" alt=""/></a>
+<div id="title-9" class="hidden">
+   Countryside Lane<br>We enjoyed a quiet stroll down this countryside lane. 
+</div>
+
+<a class="fancybox" data-title-id="title-10" href="img/photos2/10.jpg"><img src="img/photos2/thumbnails/10.jpg" alt=""/></a>
+<div id="title-10" class="hidden">
+   Sunset<br>Sunset at the coast! The sky turned a lovely shade of orange. 
+</div>
+
+<a class="fancybox" data-title-id="title-11" href="img/photos2/11.jpg"><img src="img/photos2/thumbnails/11.jpg" alt=""/></a>
+<div id="title-11" class="hidden">
+   Cave<br>I did a tour of a cave today and the view of the landscape below was breathtaking. 
+</div>
+
+<a class="fancybox" data-title-id="title-12" href="img/photos2/12.jpg"><img src="img/photos2/thumbnails/12.jpg" alt=""/></a>
+<div id="title-12" class="hidden">
+   Bluebells<br>I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in.
+</div>
+
+
+
+        <div class="emptyContainer"><span></span></div>
+      </main>
+       
+    </div>
+    
+    
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/fancybox/jquery.fancybox.js"></script>
+    <script>
+        $("a[href$='.jpg']").attr('rel', 'gallery').fancybox();
+        $('.fancybox').fancybox({
+            beforeLoad: function() {
+            var el, id = $(this.element).data('title-id');
+
+            if (id) {
+                el = $('#' + id);
+            
+                if (el.length) {
+                    this.title = el.html();
+                }
+              }
+            },
+  
+            afterClose : function() {
+                location.reload();
+                return;
+            },
+            openEffect  : 'fade',
+            closeEffect : 'fade',
+            nextEffect : 'fade',
+            prevEffect : 'fade',
+            closeBtn: true,
+            arrows: true,
+            helpers : {
+              title: {
+                type: 'inside'
+              }
+            }
+          
+       });
+      
+    
+        
+    </script>
+    <script src="js/search2.js"></script>
+  </body>
+</html>
