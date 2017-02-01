@@ -1,7 +1,5 @@
 # treehouse-jquery-lightbox
 
-Take 2. 
-
 This project was a good learning experience for me. I found javascript and jquery more challenging than css and html.
 
 To make the project a bit more visually appealing I decided to use some of my own images instead of those provided and give it a theme (Winter in Norway) so as to add a little more interest to the project.
